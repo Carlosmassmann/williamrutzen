@@ -22,7 +22,12 @@
   --vidro: rgba(255, 255, 255, 0.10);
   --vidro-borda: rgba(255, 255, 255, 0.22);
   --veu-forte: rgba(10, 35, 66, 0.92);
+  --veu-medio: rgba(10, 35, 66, 0.7);
   --veu-leve: rgba(10, 35, 66, 0.15);
+  --veu-zero: rgba(10, 35, 66, 0);
+  --brilho-azul: rgba(23, 101, 184, 0.35);
+  --brilho-ceu: rgba(143, 198, 242, 0.55);
+  --sombra-texto: 0 2px 24px rgba(10, 35, 66, 0.55);
   --sombra-botao: 0 10px 24px -10px rgba(23, 101, 184, 0.85);
   --sombra-whats: 0 10px 24px -10px rgba(31, 157, 85, 0.8);
 

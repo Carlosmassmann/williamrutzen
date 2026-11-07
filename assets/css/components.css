@@ -99,3 +99,16 @@
   color: var(--texto-claro); background: var(--vidro);
   border: 1px solid var(--vidro-borda); border-radius: 999px;
 }
+/* Etiqueta de maior destaque (ex.: "Black Friday · dia 13/11" no topo) */
+.tag--destaque {
+  display: inline-flex; align-items: center; gap: 0.55rem;
+  padding: 0.5rem 1rem;
+  color: var(--azul-950); background: var(--azul-300);
+  border-color: transparent;
+  box-shadow: 0 10px 28px -8px var(--brilho-ceu);
+}
+.tag--destaque::before {
+  content: ""; flex: none;
+  width: 0.5rem; height: 0.5rem; border-radius: 50%;
+  background: var(--azul-700);
+}
