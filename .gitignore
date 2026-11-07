@@ -1,0 +1,6 @@
+node_modules/
+.DS_Store
+Thumbs.db
+.env
+acervo-midia/_originais/*
+!acervo-midia/_originais/.gitkeep

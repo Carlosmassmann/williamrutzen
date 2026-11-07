@@ -1,0 +1,35 @@
+/* Design tokens: cores, tipografia, espaçamentos. Mude aqui para mudar o visual todo. */
+:root {
+  /* Cores */
+  --verde-950: #0b231c;
+  --verde-900: #0f2e25;
+  --verde-700: #1d4a3b;
+  --verde-500: #2f7a5f;
+  --creme: #f6f1e7;
+  --areia: #e9dfcd;
+  --terracota: #c4552d;
+  --terracota-escuro: #a3431f;
+  --texto: #1b1b18;
+  --texto-suave: #4d4a42;
+  --branco: #ffffff;
+  --erro: #b3261e;
+
+  /* Tipografia */
+  --fonte-titulo: "Fraunces", Georgia, "Times New Roman", serif;
+  --fonte-corpo: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --t-xs: 0.8125rem;
+  --t-sm: 0.9375rem;
+  --t-base: 1.0625rem;
+  --t-lg: 1.25rem;
+  --t-xl: clamp(1.5rem, 1.1rem + 1.6vw, 2.1rem);
+  --t-2xl: clamp(2.1rem, 1.3rem + 3.6vw, 3.6rem);
+
+  /* Layout */
+  --largura: 1120px;
+  --gutter: 20px;
+  --raio: 14px;
+  --raio-lg: 24px;
+  --sombra: 0 18px 40px -18px rgba(11, 35, 28, 0.35);
+  --transicao: 180ms ease;
+}

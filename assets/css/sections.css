@@ -1,0 +1,75 @@
+/* Seções da página */
+
+.topbar { background: var(--verde-950); color: var(--creme); }
+.topbar .container { display: flex; align-items: center; justify-content: center; padding-block: 0.85rem; }
+.brand { font: 600 var(--t-base) var(--fonte-titulo); letter-spacing: 0.02em; }
+.brand span { color: var(--terracota); }
+
+/* Hero */
+.hero {
+  color: var(--creme);
+  background:
+    radial-gradient(900px 480px at 85% -10%, rgba(47, 122, 95, 0.55), transparent 60%),
+    linear-gradient(180deg, var(--verde-950), var(--verde-900));
+  padding-block: clamp(2.5rem, 6vw, 5rem);
+}
+.hero__grid { display: grid; gap: 2.25rem; align-items: center; }
+.hero h1 { font-size: var(--t-2xl); }
+.hero h1 em { font-style: italic; color: #f2b394; }
+.hero__sub { font-size: var(--t-lg); max-width: 34rem; opacity: 0.9; }
+.hero__countdown { margin-top: 1.5rem; }
+.hero__countdown p { font-size: var(--t-sm); opacity: 0.8; margin-bottom: 0.6rem; }
+
+/* Seções genéricas */
+.section { padding-block: clamp(3rem, 7vw, 5.5rem); }
+.section--areia { background: var(--areia); }
+.section__head { max-width: 40rem; margin-bottom: 2.25rem; }
+.section__head h2 { font-size: var(--t-xl); }
+.section__head p { color: var(--texto-suave); }
+
+.pilares { display: grid; gap: 1rem; }
+
+/* Quem está por trás */
+.autor { display: grid; gap: 2rem; align-items: center; }
+.autor__cred { font-weight: 600; color: var(--verde-700); }
+
+/* Para quem é + passos */
+.dois-col { display: grid; gap: 2rem; }
+.lista-check { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.75rem; }
+.lista-check li { padding-left: 2rem; position: relative; }
+.lista-check li::before {
+  content: "✓"; position: absolute; left: 0; top: 0.1rem;
+  width: 1.4rem; height: 1.4rem; display: grid; place-items: center;
+  font-size: 0.8rem; font-weight: 700; color: var(--branco); background: var(--verde-500); border-radius: 50%;
+}
+.passos { counter-reset: passo; list-style: none; padding: 0; margin: 0; display: grid; gap: 1rem; }
+.passos li { counter-increment: passo; padding-left: 3rem; position: relative; }
+.passos li::before {
+  content: counter(passo); position: absolute; left: 0; top: -0.1rem;
+  width: 2.2rem; height: 2.2rem; display: grid; place-items: center;
+  font: 600 1rem var(--fonte-titulo); color: var(--creme); background: var(--verde-700); border-radius: 50%;
+}
+
+/* Chamada final */
+.cta-final { background: var(--verde-900); color: var(--creme); text-align: center; }
+.cta-final h2 { font-size: var(--t-xl); }
+.cta-final .lead-form { max-width: 30rem; margin: 1.5rem auto 0; text-align: left; }
+
+/* Rodapé */
+.footer { background: var(--verde-950); color: rgba(246, 241, 231, 0.7); padding-block: 2rem; font-size: var(--t-xs); text-align: center; }
+.footer p { max-width: 44rem; margin-inline: auto; }
+
+/* Página de obrigado */
+.obrigado { min-height: 70vh; display: grid; place-items: center; text-align: center; padding-block: 4rem; }
+.obrigado__card { max-width: 34rem; }
+.obrigado .check { width: 4rem; height: 4rem; margin: 0 auto 1.25rem; display: grid; place-items: center; font-size: 2rem; color: var(--branco); background: var(--verde-500); border-radius: 50%; }
+
+/* Responsivo (mobile-first) */
+@media (min-width: 760px) {
+  .hero__grid { grid-template-columns: 1.15fr 0.85fr; gap: 3.5rem; }
+  .pilares { grid-template-columns: repeat(6, 1fr); }
+  .pilar:nth-child(-n+3) { grid-column: span 2; }
+  .pilar:nth-child(n+4) { grid-column: span 3; }
+  .autor { grid-template-columns: 0.8fr 1.2fr; gap: 3.5rem; }
+  .dois-col { grid-template-columns: 1fr 1fr; gap: 3.5rem; }
+}
