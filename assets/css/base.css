@@ -9,7 +9,7 @@ body {
   font-size: var(--t-base);
   line-height: 1.6;
   color: var(--texto);
-  background: var(--creme);
+  background: var(--azul-50);
 }
 
 img { max-width: 100%; display: block; }
@@ -27,7 +27,7 @@ p { margin: 0 0 1em; }
 a { color: inherit; }
 
 :focus-visible {
-  outline: 3px solid var(--terracota);
+  outline: 3px solid var(--azul-700);
   outline-offset: 3px;
   border-radius: 4px;
 }

@@ -1,18 +1,30 @@
 /* Design tokens: cores, tipografia, espaçamentos. Mude aqui para mudar o visual todo. */
 :root {
-  /* Cores */
-  --verde-950: #0b231c;
-  --verde-900: #0f2e25;
-  --verde-700: #1d4a3b;
-  --verde-500: #2f7a5f;
-  --creme: #f6f1e7;
-  --areia: #e9dfcd;
-  --terracota: #c4552d;
-  --terracota-escuro: #a3431f;
-  --texto: #1b1b18;
-  --texto-suave: #4d4a42;
+  /* Cores: três tons de azul (saúde, confiança) + branco */
+  --azul-950: #0a2342;   /* marinho: topo, hero, rodapé */
+  --azul-900: #0e3361;   /* marinho claro: chamada final */
+  --azul-700: #1765b8;   /* azul principal: botão, números, ícones */
+  --azul-800: #11519a;   /* hover do botão */
+  --azul-300: #8fc6f2;   /* azul céu: destaques sobre fundo escuro */
+  --azul-100: #e6f1fb;   /* fundo de seção clara */
+  --azul-50:  #f5f9fe;   /* fundo da página e dos campos */
+  --borda: #cfe0f2;
+  --texto: #0f1d2e;
+  --texto-suave: #43546b;
+  --texto-claro: #eef5fd;           /* texto sobre fundo escuro */
+  --texto-claro-suave: rgba(238, 245, 253, 0.72);
   --branco: #ffffff;
   --erro: #b3261e;
+  --whatsapp: #1f9d55;
+  --whatsapp-escuro: #17804a;
+
+  /* Sobreposições (vidro, véu sobre foto) */
+  --vidro: rgba(255, 255, 255, 0.10);
+  --vidro-borda: rgba(255, 255, 255, 0.22);
+  --veu-forte: rgba(10, 35, 66, 0.92);
+  --veu-leve: rgba(10, 35, 66, 0.15);
+  --sombra-botao: 0 10px 24px -10px rgba(23, 101, 184, 0.85);
+  --sombra-whats: 0 10px 24px -10px rgba(31, 157, 85, 0.8);
 
   /* Tipografia */
   --fonte-titulo: "Fraunces", Georgia, "Times New Roman", serif;
@@ -30,6 +42,6 @@
   --gutter: 20px;
   --raio: 14px;
   --raio-lg: 24px;
-  --sombra: 0 18px 40px -18px rgba(11, 35, 28, 0.35);
+  --sombra: 0 18px 40px -18px rgba(10, 35, 66, 0.4);
   --transicao: 180ms ease;
 }

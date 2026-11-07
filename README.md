@@ -43,7 +43,7 @@ captura-construa-saude/
 
 | Pasta | O que colocar | Usado em |
 |---|---|---|
-| `fotos-dr-william/` | Retratos e fotos do Dr. William | `dr-william-retrato.jpg` na seção "Quem está por trás" |
+| `fotos-dr-william/` | Retratos e fotos do Dr. William | Sessão 1 (hero): `will-serio-mobile1-sessao1.jpg` · Sessão 2: `will-atendimento-online-desktop1-sessao2.jpg` · Sessão 4 (Quem está por trás): `imagem-drwilliam-sessao4-fotodrwill.jpg` |
 | `produtos-capas/` | Capas dos cursos e ebooks | Futuras seções de produtos |
 | `logos/` | Logos (Dr. William, Epic Medical) | Topo e rodapé |
 | `videos/` | Vídeos curtos de apresentação | Futuro hero com vídeo |
@@ -51,7 +51,7 @@ captura-construa-saude/
 | `_originais/` | Arquivos pesados sem tratamento | Não vai para o ar |
 
 Regras: nomes em minúsculas com hífen (`dr-william-retrato.jpg`); fotos até ~300 KB (use WebP ou JPG otimizado); sempre preencher o `alt` no HTML.
-Enquanto a foto não existir, a página mostra um bloco verde decorativo no lugar.
+Enquanto a foto não existir, a página mostra um bloco azul decorativo no lugar.
 
 ## O que falta preencher (antes de publicar)
 

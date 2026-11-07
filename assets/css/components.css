@@ -7,16 +7,16 @@
   padding: 1rem 1.5rem;
   font: 700 var(--t-base)/1 var(--fonte-corpo);
   color: var(--branco);
-  background: var(--terracota);
+  background: var(--azul-700);
   border: 0; border-radius: 999px;
   cursor: pointer;
-  box-shadow: 0 10px 24px -10px rgba(196, 85, 45, 0.8);
+  box-shadow: var(--sombra-botao);
   transition: transform var(--transicao), background var(--transicao);
 }
-.btn:hover { background: var(--terracota-escuro); transform: translateY(-1px); }
+.btn:hover { background: var(--azul-800); transform: translateY(-1px); }
 .btn:disabled { opacity: 0.7; cursor: progress; transform: none; }
-.btn--whats { background: #1f9d55; box-shadow: 0 10px 24px -10px rgba(31, 157, 85, 0.8); }
-.btn--whats:hover { background: #17804a; }
+.btn--whats { background: var(--whatsapp); box-shadow: var(--sombra-whats); }
+.btn--whats:hover { background: var(--whatsapp-escuro); }
 .btn--inline { width: auto; }
 
 /* Formulário de captura */
@@ -35,16 +35,16 @@
   width: 100%;
   padding: 0.85rem 1rem;
   font: inherit;
-  border: 1.5px solid var(--areia);
+  border: 1.5px solid var(--borda);
   border-radius: var(--raio);
-  background: var(--creme);
+  background: var(--azul-50);
   transition: border-color var(--transicao), background var(--transicao);
 }
-.lead-form input:focus { border-color: var(--verde-500); background: var(--branco); outline: none; }
+.lead-form input:focus { border-color: var(--azul-700); background: var(--branco); outline: none; }
 .lead-form input[aria-invalid="true"] { border-color: var(--erro); }
 .field-error { color: var(--erro); font-size: var(--t-xs); min-height: 1em; margin: 0.25rem 0 0; }
 .lead-form .consent { display: flex; gap: 0.6rem; align-items: flex-start; font-size: var(--t-xs); color: var(--texto-suave); }
-.lead-form .consent input { margin-top: 0.2rem; accent-color: var(--verde-700); }
+.lead-form .consent input { margin-top: 0.2rem; accent-color: var(--azul-700); }
 .lead-form .micro { font-size: var(--t-xs); color: var(--texto-suave); margin: 0; text-align: center; }
 .form-status { font-size: var(--t-sm); text-align: center; margin: 0; min-height: 1.2em; }
 .form-status.is-error { color: var(--erro); }
@@ -53,42 +53,42 @@
 .countdown { display: flex; gap: 0.6rem; }
 .countdown__item {
   min-width: 4.2rem; padding: 0.6rem 0.4rem; text-align: center;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: var(--vidro);
+  border: 1px solid var(--vidro-borda);
   border-radius: var(--raio);
 }
 .countdown__num { display: block; font: 600 1.7rem/1 var(--fonte-titulo); font-variant-numeric: tabular-nums; }
-.countdown__label { font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.75; }
+.countdown__label { font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.8; }
 
 /* Cartão de pilar */
 .pilar {
   background: var(--branco);
   border-radius: var(--raio-lg);
   padding: 1.5rem;
-  border: 1px solid var(--areia);
+  border: 1px solid var(--borda);
 }
 .pilar__num {
   display: inline-grid; place-items: center;
   width: 2.2rem; height: 2.2rem; margin-bottom: 0.75rem;
   font: 600 1rem var(--fonte-titulo);
-  color: var(--branco); background: var(--verde-700); border-radius: 50%;
+  color: var(--branco); background: var(--azul-700); border-radius: 50%;
 }
 .pilar h3 { font-size: var(--t-lg); }
 .pilar p { margin: 0; color: var(--texto-suave); font-size: var(--t-sm); }
 
 /* Foto com fallback: se a imagem não existir, aparece o bloco decorativo */
 .foto {
-  position: relative; overflow: hidden;
+  position: relative; overflow: hidden; margin: 0;
   aspect-ratio: 4 / 5;
   border-radius: var(--raio-lg);
-  background: linear-gradient(160deg, var(--verde-700), var(--verde-950));
+  background: linear-gradient(160deg, var(--azul-700), var(--azul-950));
   box-shadow: var(--sombra);
 }
 .foto img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .foto::after {
   content: attr(data-placeholder);
   position: absolute; inset: auto 1rem 1rem 1rem;
-  font-size: var(--t-xs); color: rgba(255, 255, 255, 0.7);
+  font-size: var(--t-xs); color: var(--texto-claro-suave);
 }
 .foto.has-image::after { display: none; }
 
@@ -96,6 +96,6 @@
 .tag {
   display: inline-block; padding: 0.35rem 0.8rem; margin-bottom: 1rem;
   font-size: var(--t-xs); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
-  color: var(--creme); background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.25); border-radius: 999px;
+  color: var(--texto-claro); background: var(--vidro);
+  border: 1px solid var(--vidro-borda); border-radius: 999px;
 }
