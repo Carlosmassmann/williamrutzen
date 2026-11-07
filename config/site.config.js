@@ -13,11 +13,13 @@ window.SITE_CONFIG = {
   //  "whatsapp": redireciona direto para o grupo (sem salvar o lead)
   captureMode: "endpoint",
 
-  // URL do webhook que recebe o JSON do lead. Deixe vazio durante o desenvolvimento.
-  formEndpoint: "",
+  // URL que recebe o JSON do lead. Para a planilha do Google, cole aqui a URL
+  // do App da Web (termina em /exec) gerada com integracoes/planilha-leads.gs.
+  // Deixe vazio durante o desenvolvimento.
+  formEndpoint: "https://script.google.com/macros/s/AKfycbz8RK3UXj911KEqicnCxvW0J9SvQ9DB3kmjKOr59r9CfQFUXTEphW2DHSRrCYc1KOL9ig/exec",
 
   // Link de convite do grupo de WhatsApp (aparece na página de obrigado).
-  whatsappGroupUrl: "",
+  whatsappGroupUrl: "https://chat.whatsapp.com/CfyWtm78BwqGBvctXQOr9i",
 
   // Página exibida após o cadastro.
   thankYouPath: "obrigado.html",

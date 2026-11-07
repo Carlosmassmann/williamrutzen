@@ -57,12 +57,30 @@ Enquanto a foto não existir, a página mostra um bloco azul decorativo no lugar
 
 1. `config/site.config.js`
    - `launchDate`: confirmar o horário de abertura do carrinho.
-   - `formEndpoint`: URL do webhook que recebe o lead (Make, n8n, Zapier, ListBoss).
-   - `whatsappGroupUrl`: link de convite do grupo.
+   - `formEndpoint`: URL da planilha de leads (ver "Planilha de leads" abaixo) ou de outro webhook (Make, n8n, Zapier).
+   - `whatsappGroupUrl`: já preenchido com o grupo da Black Friday.
    - `tracking.metaPixelId` / `ga4Id`.
    - `doctor.credentials`: CRM/RQE exatamente como o Dr. William aprovar.
 2. Fotos em `acervo-midia/` (retrato e `og.jpg`).
 3. Aprovação do Dr. William sobre a copy (o texto atual não tem preço nem bônus de propósito).
+
+## Planilha de leads (Google Sheets)
+
+Cada cadastro vira uma linha na aba **Leads** de uma planilha do Google. O script fica em [`integracoes/planilha-leads.gs`](integracoes/planilha-leads.gs).
+
+1. Crie uma planilha no Google Sheets, com a conta que vai administrar os leads.
+2. **Extensões > Apps Script**. Apague o código que aparece, cole todo o conteúdo de `integracoes/planilha-leads.gs` e salve.
+3. **Implantar > Nova implantação** > engrenagem > **App da Web**.
+   - Executar como: **Eu**
+   - Quem pode acessar: **Qualquer pessoa** (necessário para a página enviar sem login)
+4. Autorize o acesso. O Google avisa que o app "não foi verificado": clique em **Avançado > Acessar** (é o seu próprio script).
+5. Copie a URL que termina em `/exec` e cole em `formEndpoint` no `config/site.config.js`. Faça commit e push.
+6. Teste: cadastre-se na página publicada e confira a linha nova na planilha.
+
+Colunas: data/hora (Brasília), nome, e-mail, WhatsApp, consentimento, formulário (hero/final), página, UTMs, fbclid e gclid.
+Se mudar o script depois: **Implantar > Gerenciar implantações > lápis > Versão: Nova versão** (assim a URL não muda).
+
+Enquanto `formEndpoint` estiver vazio, o formulário só funciona em teste local (localhost). Na página publicada ele mostra erro em vez de perder o lead em silêncio.
 
 ## Formato do lead enviado ao endpoint (JSON)
 

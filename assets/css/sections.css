@@ -36,7 +36,7 @@
   grid-template-areas: "texto" "contagem" "form";
 }
 .hero__texto { grid-area: texto; }
-.hero .tag--destaque { font-size: 0.6875rem; letter-spacing: 0.03em; padding: 0.45rem 0.85rem; margin-bottom: 0.75rem; }
+.hero .tag--destaque, .obrigado .tag--destaque { font-size: 0.6875rem; letter-spacing: 0.03em; padding: 0.45rem 0.85rem; margin-bottom: 0.75rem; }
 .hero .lead-form { grid-area: form; }
 .hero h1 { font-size: clamp(1.75rem, 1.2rem + 2.4vw, 3.6rem); margin-bottom: 0.4em; color: var(--branco); text-shadow: var(--sombra-texto); }
 .hero h1 em { font-style: italic; color: var(--azul-300); }
@@ -90,9 +90,22 @@
 .footer p { max-width: 44rem; margin-inline: auto; }
 
 /* Página de obrigado */
-.obrigado { min-height: 70vh; display: grid; place-items: center; text-align: center; padding-block: 4rem; }
+.obrigado {
+  min-height: 80vh; display: grid; place-items: center; text-align: center;
+  padding-block: 4rem;
+  color: var(--branco);
+  background:
+    radial-gradient(900px 480px at 50% -10%, var(--brilho-azul), transparent 60%),
+    linear-gradient(180deg, var(--azul-950), var(--azul-900));
+}
+.obrigado :focus-visible { outline-color: var(--azul-300); }
 .obrigado__card { max-width: 34rem; }
-.obrigado .check { width: 4rem; height: 4rem; margin: 0 auto 1.25rem; display: grid; place-items: center; font-size: 2rem; color: var(--branco); background: var(--azul-700); border-radius: 50%; }
+.obrigado h1 { font-size: var(--t-xl); margin-top: 0.5rem; }
+.obrigado p { font-size: var(--t-lg); color: var(--texto-claro); }
+.obrigado .destaque { color: var(--azul-300); }
+.obrigado__passo { margin: 1.5rem 0 1rem; }
+.obrigado .btn--whats { padding-inline: 2rem; }
+.obrigado__passo:last-child { margin-top: 1rem; }
 
 /* Responsivo (mobile-first) */
 @media (min-width: 760px) {
@@ -118,7 +131,7 @@
   /* Desktop: foto levemente dessaturada e tingida de azul para conversar com a paleta */
   .hero__bg img { object-position: 60% 18%; filter: saturate(0.75); }
   .hero__grid { gap: 1.75rem; }
-  .hero .tag--destaque { font-size: var(--t-xs); letter-spacing: 0.08em; padding: 0.5rem 1rem; margin-bottom: 1rem; }
+  .hero .tag--destaque, .obrigado .tag--destaque { font-size: var(--t-xs); letter-spacing: 0.08em; padding: 0.5rem 1rem; margin-bottom: 1rem; }
   .hero__sub { font-size: var(--t-lg); line-height: 1.6; }
   .hero__countdown p { font-size: var(--t-sm); }
   .hero__countdown .countdown__item { min-width: 4.2rem; padding: 0.6rem 0.4rem; }

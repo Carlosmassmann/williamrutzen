@@ -20,11 +20,13 @@
 <body>
   <main class="obrigado">
     <div class="container obrigado__card">
-      <div class="check" aria-hidden="true">✓</div>
-      <h1>Pronto, você está na lista!</h1>
-      <p>No dia <strong>13/11</strong>, você recebe o aviso assim que o carrinho abrir.</p>
-      <p>Para não perder, entre agora no grupo do WhatsApp e salve o número do Dr. William nos seus contatos.</p>
-      <a class="btn btn--whats btn--inline" data-whatsapp-group href="#" hidden>Entrar no grupo do WhatsApp</a>
+      <span class="tag tag--destaque">Black Friday Dr. William Rutzen · dia 13/11</span>
+      <h1>Pronto, você está na lista! <span aria-hidden="true">✅</span></h1>
+      <p>No dia <strong class="destaque">13/11</strong>, você recebe o aviso assim que o carrinho abrir.</p>
+      <p class="obrigado__passo">Para não perder, faça agora:</p>
+      <!-- Link do grupo vem de whatsappGroupUrl na config -->
+      <a class="btn btn--whats btn--inline" data-whatsapp-group href="#" target="_blank" rel="noopener" hidden>Entrar no grupo do WhatsApp</a>
+      <p class="obrigado__passo">e salve o número do Dr. William nos contatos.</p>
     </div>
   </main>
 

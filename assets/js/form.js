@@ -69,12 +69,19 @@
       }
       return Promise.reject(new Error("formEndpoint não configurado"));
     }
+    // Google Apps Script (planilha) não aceita a pré-checagem de CORS do navegador:
+    // enviamos o mesmo JSON como text/plain e lemos a resposta { ok: true/false }.
+    var planilhaGoogle = cfg.formEndpoint.indexOf("script.google.com") !== -1;
     return fetch(cfg.formEndpoint, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": planilhaGoogle ? "text/plain;charset=utf-8" : "application/json" },
       body: JSON.stringify(payload)
     }).then(function (res) {
       if (!res.ok) throw new Error("HTTP " + res.status);
+      if (!planilhaGoogle) return;
+      return res.json().then(function (r) {
+        if (!r || r.ok !== true) throw new Error("planilha recusou: " + (r && r.erro));
+      });
     });
   }
 
