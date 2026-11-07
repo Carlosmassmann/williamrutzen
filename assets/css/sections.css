@@ -10,39 +10,43 @@
    Mobile/tablet: foto no topo e textos entrando sobre a parte de baixo dela.
    Desktop: foto ocupa o lado direito e se funde ao azul pela esquerda e por baixo. */
 .hero {
-  --hero-foto-h: min(150vw, 720px);
+  /* Mobile: foto mais baixa e textos menores para o começo do formulário
+     aparecer na primeira tela. */
+  --hero-foto-h: min(100vw, 520px);
   position: relative; isolation: isolate; overflow: hidden;
   color: var(--branco);
   background: var(--azul-950);
-  padding-top: calc(var(--hero-foto-h) * 0.52);
+  padding-top: calc(var(--hero-foto-h) * 0.45);
   padding-bottom: clamp(2.5rem, 6vw, 4.5rem);
 }
 .hero__bg {
   position: absolute; z-index: -1; margin: 0;
   inset: 0 0 auto 0; height: var(--hero-foto-h);
 }
-.hero__bg img { width: 100%; height: 100%; object-fit: cover; object-position: 60% 18%; }
-/* Mobile/tablet: foto 100% visível acima da etiqueta (topo ~52% da foto);
+.hero__bg img { width: 100%; height: 100%; object-fit: cover; object-position: 45% 70%; }
+/* Mobile/tablet: foto 100% visível acima da etiqueta (topo ~45% da foto);
    o degradê azul só começa na faixa dos textos. */
 .hero__bg::after {
   content: ""; position: absolute; inset: 0;
-  background: linear-gradient(to top, var(--azul-950) 0%, var(--azul-950) 12%, var(--veu-forte) 24%, var(--veu-medio) 36%, var(--veu-zero) 48%);
+  background: linear-gradient(to top, var(--azul-950) 0%, var(--azul-950) 14%, var(--veu-forte) 28%, var(--veu-medio) 42%, var(--veu-zero) 55%);
 }
 
 .hero__grid {
-  display: grid; gap: 1.5rem;
+  display: grid; gap: 1rem;
   grid-template-areas: "texto" "contagem" "form";
 }
 .hero__texto { grid-area: texto; }
+.hero .tag--destaque { font-size: 0.6875rem; letter-spacing: 0.03em; padding: 0.45rem 0.85rem; margin-bottom: 0.75rem; }
 .hero .lead-form { grid-area: form; }
-.hero h1 { font-size: var(--t-2xl); color: var(--branco); text-shadow: var(--sombra-texto); }
+.hero h1 { font-size: clamp(1.75rem, 1.2rem + 2.4vw, 3.6rem); margin-bottom: 0.4em; color: var(--branco); text-shadow: var(--sombra-texto); }
 .hero h1 em { font-style: italic; color: var(--azul-300); }
-.hero__sub { font-size: var(--t-lg); max-width: 34rem; margin: 0; color: var(--branco); text-shadow: var(--sombra-texto); }
+.hero__sub { font-size: 1rem; line-height: 1.5; max-width: 34rem; margin: 0; color: var(--branco); text-shadow: var(--sombra-texto); }
 .hero .destaque { font-weight: 700; color: var(--azul-300); }
 
 .hero__countdown { grid-area: contagem; }
-.hero__countdown p { font-size: var(--t-sm); margin-bottom: 0.5rem; }
-.hero__countdown .countdown__item { backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+.hero__countdown p { font-size: var(--t-xs); margin-bottom: 0.4rem; }
+.hero__countdown .countdown__item { min-width: 3.6rem; padding: 0.45rem 0.3rem; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+.hero__countdown .countdown__num { font-size: 1.35rem; }
 
 /* Seções genéricas */
 .section { padding-block: clamp(3rem, 7vw, 5.5rem); }
@@ -99,6 +103,9 @@
   .autor { grid-template-columns: 0.8fr 1.2fr; gap: 3.5rem; }
   .dois-col { grid-template-columns: 1fr 1fr; gap: 3.5rem; }
 
+  /* Tablet: foto mais larga, então o enquadramento sobe para não cortar a cabeça */
+  .hero__bg img { object-position: 45% 45%; }
+
   /* Formulário do hero mais compacto: e-mail e WhatsApp lado a lado */
   .hero .lead-form { grid-template-columns: 1fr 1fr; column-gap: 0.75rem; }
   .hero .lead-form > * { grid-column: 1 / -1; }
@@ -109,7 +116,13 @@
   .hero { padding-block: clamp(3rem, 6vw, 5rem); }
   .hero__bg { inset: 0 0 0 auto; width: 60%; height: auto; }
   /* Desktop: foto levemente dessaturada e tingida de azul para conversar com a paleta */
-  .hero__bg img { filter: saturate(0.75); }
+  .hero__bg img { object-position: 60% 18%; filter: saturate(0.75); }
+  .hero__grid { gap: 1.75rem; }
+  .hero .tag--destaque { font-size: var(--t-xs); letter-spacing: 0.08em; padding: 0.5rem 1rem; margin-bottom: 1rem; }
+  .hero__sub { font-size: var(--t-lg); line-height: 1.6; }
+  .hero__countdown p { font-size: var(--t-sm); }
+  .hero__countdown .countdown__item { min-width: 4.2rem; padding: 0.6rem 0.4rem; }
+  .hero__countdown .countdown__num { font-size: 1.7rem; }
   .hero__bg::after {
     background:
       linear-gradient(to top, var(--azul-950) 0%, var(--veu-medio) 28%, var(--veu-zero) 62%),

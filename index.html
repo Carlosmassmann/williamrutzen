@@ -29,9 +29,11 @@
   <main>
     <!-- 1. HERO + CAPTURA (sessão 1): foto de fundo com degradê azul de baixo para cima -->
     <section class="hero" id="topo">
-      <figure class="hero__bg">
-        <img src="acervo-midia/fotos-dr-william/will-serio-mobile1-sessao1.jpg" alt="Dr. William Rutzen sentado à mesa, com expressão pensativa" width="1000" height="1452" fetchpriority="high">
-      </figure>
+      <!-- Celular/tablet: foto de atendimento online · Desktop (960px+): foto pensativa -->
+      <picture class="hero__bg">
+        <source media="(max-width: 959px)" srcset="acervo-midia/fotos-dr-william/will-atendimento-online-mobile1.jpg" width="900" height="1351">
+        <img src="acervo-midia/fotos-dr-william/will-serio-mobile1-sessao1.jpg" alt="Dr. William Rutzen" width="1000" height="1452" fetchpriority="high">
+      </picture>
 
       <div class="container hero__grid">
         <div class="hero__texto">
