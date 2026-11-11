@@ -100,7 +100,7 @@
   color: var(--texto-claro); background: var(--vidro);
   border: 1px solid var(--vidro-borda); border-radius: 999px;
 }
-/* Etiqueta de maior destaque (ex.: "Black Friday · dia 13/11" no topo) */
+/* Etiqueta de maior destaque (ex.: "Black Friday · dia 16/11" no topo) */
 .tag--destaque {
   display: inline-flex; align-items: center; gap: 0.55rem;
   padding: 0.5rem 1rem;

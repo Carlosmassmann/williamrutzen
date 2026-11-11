@@ -1,6 +1,6 @@
 # CLAUDE.md · Página de captura Black Friday Dr. William Rutzen
 
-Contexto: página de captura (lista de aviso) para a Black Friday do Dr. William Rutzen, médico com foco em emagrecimento e medicina do estilo de vida. Lançamento em 13/11/2026. Narrativa: "Tudo que você precisa para construir a sua saúde."
+Contexto: página de captura (lista de aviso) para a Black Friday do Dr. William Rutzen, médico com foco em emagrecimento e medicina do estilo de vida. Lançamento em 16/11/2026. Narrativa: "Tudo que você precisa para construir a sua saúde."
 
 ## Regras do projeto
 

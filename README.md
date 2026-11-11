@@ -1,7 +1,7 @@
 # Página de captura · Black Friday Dr. William Rutzen
 
 Narrativa: **"Tudo que você precisa para construir a sua saúde."**
-Lançamento: **13/11/2026**. Objetivo da página: capturar nome, e-mail e WhatsApp para a lista de aviso.
+Lançamento: **16/11/2026**. Objetivo da página: capturar nome, e-mail e WhatsApp para a lista de aviso.
 
 Site estático: HTML, CSS e JS puros, sem build e sem dependências. Abre em qualquer hospedagem (Vercel, Netlify, Hostinger, GitHub Pages).
 

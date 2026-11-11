@@ -6,7 +6,7 @@
 window.SITE_CONFIG = {
   // Data/hora da abertura do carrinho (fuso de Brasília, -03:00).
   // TODO: confirmar o horário de abertura com o Dr. William.
-  launchDate: "2026-11-13T10:00:00-03:00",
+  launchDate: "2026-11-16T10:00:00-03:00",
 
   // Como o lead é capturado:
   //  "endpoint": envia o formulário para formEndpoint (Make, n8n, Zapier, ListBoss, etc.)
