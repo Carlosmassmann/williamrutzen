@@ -26,7 +26,7 @@ window.SITE_CONFIG = {
 
   // Rastreamento. Deixe vazio para desativar.
   tracking: {
-    metaPixelId: "",
+    metaPixelId: "924982403902542",
     ga4Id: ""
   },
 
