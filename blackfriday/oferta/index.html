@@ -181,13 +181,32 @@ footer b{color:var(--text-soft);font-weight:500}
   .bonus-img::after{background:linear-gradient(180deg,transparent 50%,rgba(6,17,31,.95))}
   .bonus-body{padding:36px 24px}
   .bonus-cols{grid-template-columns:1fr}
-  .offer-card{padding:44px 22px;border-radius:26px}
+  .offer-card{border-radius:26px}
   .included{grid-template-columns:1fr}
   .manifesto{padding-block:80px}
   .bar .tag{display:none}
   .cta-row .btn{width:100%}
 }
 @media (max-width:420px){.btn{padding:18px 22px;font-size:14px}.hero h1{font-size:38px}}
+
+/* oferta: laço, timer, botão verde, aviso */
+.offer-card{position:relative;overflow:hidden;--px:40px;--py:64px;padding:var(--py) var(--px) 0}
+.offer-card .included{margin-bottom:44px}
+.ribbon{position:absolute;top:0;left:0;width:200px;height:200px;overflow:hidden;pointer-events:none;z-index:2}
+.ribbon span{position:absolute;top:40px;left:-64px;width:260px;padding:11px 0;text-align:center;transform:rotate(-45deg);background:linear-gradient(135deg,#7a5517 0%,#d9b04f 24%,#fff0b3 46%,#e2b84f 62%,#8a6420 100%);color:#2b1c04;font:700 11.5px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;border-block:1px solid rgba(255,238,175,.75);box-shadow:0 8px 20px -6px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.5);text-shadow:0 1px 0 rgba(255,244,200,.55)}
+.timer{margin:34px auto 0;display:grid;gap:14px;justify-items:center}
+.timer-label{font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--text-soft)}
+.timer-grid{display:flex;gap:12px}
+.tbox{min-width:84px;padding:14px 10px 12px;border:1px solid var(--line-strong);border-radius:16px;background:rgba(3,9,19,.55)}
+.tbox b{display:block;font:300 40px/1 var(--display);font-variant-numeric:tabular-nums;color:var(--text)}
+.tbox i{display:block;margin-top:8px;font-style:normal;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--text-faint)}
+.btn-buy{color:#04170c;background:linear-gradient(135deg,#6ff0a5 0%,#36d27a 52%,#1fa85c 100%);box-shadow:0 14px 40px -12px rgba(54,210,122,.6),inset 0 1px 0 rgba(255,255,255,.55)}
+.btn-buy:hover{transform:translateY(-2px);box-shadow:0 20px 48px -12px rgba(54,210,122,.75),inset 0 1px 0 rgba(255,255,255,.55)}
+.btn-buy:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.offer-card .btn.btn-buy{margin-top:30px}
+.warn{margin:0 calc(var(--px) * -1);padding:22px var(--px);background:#fff;color:#c1121f;font-weight:700;font-size:15px;line-height:1.5;text-align:center}
+.price .big{font-weight:400}
+@media (max-width:900px){.offer-card{--px:22px;--py:64px}.ribbon{width:170px;height:170px}.ribbon span{top:32px;left:-66px;width:240px;font-size:10.5px;padding:9px 0}.tbox{min-width:74px}.tbox b{font-size:34px}.btn-buy{width:100%;text-align:center}}
 </style>
 
 </head>
@@ -205,7 +224,7 @@ footer b{color:var(--text-soft);font-weight:500}
     <div>
       <span class="eyebrow">Black Friday · carrinho aberto</span>
       <h1>Tudo que você precisa para <em>construir a sua saúde.</em></h1>
-      <p class="lead">Os cursos e ebooks do Dr. William Rutzen sobre emagrecimento, saúde metabólica e estilo de vida, reunidos em um único pacote e organizados do começo ao fim.</p>
+      <p class="lead">Reuni em um único pacote os meus cursos e ebooks sobre emagrecimento, saúde metabólica e estilo de vida, organizados do começo ao fim.</p>
       <ul class="themes">
         <li>Emagrecimento</li><li>Saúde metabólica</li><li>Estilo de vida</li>
       </ul>
@@ -219,7 +238,7 @@ footer b{color:var(--text-soft);font-weight:500}
     <div class="portrait">
       <div class="ring"></div>
       <div class="arch"><img src="/blackfriday/oferta/img/hero.jpg" alt="Dr. William Rutzen sorrindo, em seu consultório" width="1000" height="1488"></div>
-      <div class="badge"><span>Dr. William Rutzen</span><b>Ciência aplicada ao dia a dia</b></div>
+      <div class="badge"><span>Dr. William Rutzen</span><b>Seja protagonista da sua própria saúde</b></div>
     </div>
   </div>
 </div>
@@ -228,7 +247,7 @@ footer b{color:var(--text-soft);font-weight:500}
   <div class="wrap">
     <blockquote class="rv">
       <q>Saúde não se constrói com uma dieta da moda nem com <em>uma dica solta.</em></q>
-      <cite>Ela vem de entender como o seu corpo funciona e ter um método para colocar isso em prática no dia a dia. No dia 16/11 você tem acesso ao conteúdo que o Dr. William construiu ao longo dos últimos anos, organizado do começo ao fim.</cite>
+      <cite>Ela vem de entender como o seu corpo funciona e ter um método para colocar isso em prática no dia a dia. Aqui está o conteúdo que construí ao longo dos últimos anos, organizado do começo ao fim para você.</cite>
     </blockquote>
   </div>
 </div>
@@ -279,7 +298,7 @@ footer b{color:var(--text-soft);font-weight:500}
         <div class="n">5</div>
         <div><h3>Aprofundar</h3></div>
         <div>
-          <p>O Clube de Leitura do Dr. William, para continuar aprendendo depois do básico.</p>
+          <p>O meu Clube de Leitura, para continuar aprendendo depois do básico.</p>
           <ul class="chips"><li>Clube de Leitura</li></ul>
         </div>
       </li>
@@ -294,7 +313,7 @@ footer b{color:var(--text-soft);font-weight:500}
       <div class="bonus-body">
         <span class="tagline">Bônus</span>
         <h2>Aulas da Mentoria: <em>teoria e casos clínicos.</em></h2>
-        <p>Parte do conteúdo da Mentoria de Emagrecimento da Turma 2 entra no pacote, para você ver o raciocínio clínico por trás de cada decisão.</p>
+        <p>Parte do conteúdo da minha Mentoria de Emagrecimento da Turma 2 entra no pacote, para você ver o meu raciocínio clínico por trás de cada decisão.</p>
         <div class="bonus-cols">
           <div>
             <h3>Aulas teóricas</h3>
@@ -327,7 +346,7 @@ footer b{color:var(--text-soft);font-weight:500}
     <div class="about-body rv">
       <span class="eyebrow">Quem está por trás</span>
       <h2>Evidência científica, com linguagem que <em>qualquer pessoa segue.</em></h2>
-      <p>Dr. William Rutzen é médico com foco em emagrecimento e medicina do estilo de vida. Seu trabalho une evidência científica e prática, com uma linguagem que qualquer pessoa consegue seguir.</p>
+      <p>Sou o Dr. William Rutzen, médico com foco em emagrecimento e medicina do estilo de vida. Meu trabalho une evidência científica e prática, com uma linguagem que qualquer pessoa consegue seguir.</p>
       <div class="fit">
         <h3>Para quem é</h3>
         <p>Para você que já tentou várias abordagens e quer finalmente entender o processo. Também serve para quem quer cuidar da glicemia e da inflamação com informação confiável, ou para quem busca um caminho completo em vez de conteúdo picado.</p>
@@ -339,26 +358,36 @@ footer b{color:var(--text-soft);font-weight:500}
 <section class="offer" id="oferta">
   <div class="wrap">
     <div class="offer-card rv">
+      <div class="ribbon" aria-hidden="true"><span>Acesso vitalício</span></div>
       <span class="eyebrow">Oferta de Black Friday</span>
-      <h2>O pacote completo do <em>Dr. William.</em></h2>
-      <p class="sub">Todos os cursos e ebooks sobre emagrecimento, saúde metabólica e estilo de vida, mais as aulas bônus da Mentoria.</p>
-      <div class="price" id="price">
-        <span class="from" id="price-from">Valor da Black Friday</span>
-        <span class="big" id="price-big">Em breve</span>
-        <span class="cash" id="price-cash">O valor é divulgado na abertura do carrinho.</span>
+      <h2>O meu pacote <em>completo.</em></h2>
+      <p class="sub">Todos os meus cursos e ebooks sobre emagrecimento, saúde metabólica e estilo de vida, mais as aulas bônus da Mentoria.</p>
+      <div class="timer" id="timer" role="timer" aria-live="off">
+        <span class="timer-label" id="timer-label">O acesso vitalício acaba em:</span>
+        <div class="timer-grid">
+          <div class="tbox"><b id="t-h">00</b><i>Horas</i></div>
+          <div class="tbox"><b id="t-m">00</b><i>Min</i></div>
+          <div class="tbox"><b id="t-s">00</b><i>Seg</i></div>
+        </div>
       </div>
-      <a class="btn btn-primary" id="buy" href="#oferta" data-checkout>Quero garantir o meu acesso
+      <div class="price" id="price">
+        <span class="from" id="price-from">Por apenas</span>
+        <span class="big" id="price-big"><small>12x de R$</small> 61,38</span>
+        <span class="cash" id="price-cash">ou R$ 597,00 à vista</span>
+      </div>
+      <a class="btn btn-buy" id="buy" href="#oferta" data-checkout>Quero garantir acesso vitalício
         <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="18" height="18"><path d="M4 10h12M11 5l5 5-5 5"/></svg>
       </a>
-      <p class="fine">Condição válida apenas durante o período da Black Friday.</p>
+      <p class="fine">Acesso vitalício válido apenas no primeiro dia da Black Friday.</p>
       <ul class="included">
         <li>Cursos sobre emagrecimento e saúde metabólica</li>
         <li>Ebooks de receitas e guias práticos</li>
         <li>Guias de musculação e de menopausa</li>
-        <li>Clube de Leitura do Dr. William</li>
+        <li>O meu Clube de Leitura</li>
         <li>Bônus: aulas teóricas e casos clínicos da Mentoria</li>
         <li>Conteúdo organizado em trilha, do começo ao fim</li>
       </ul>
+      <p class="warn">O bônus de acesso vitalício é exclusivo para quem entrar no primeiro dia de Black Friday, a partir do dia 17/11 passa para um ano de acesso.</p>
     </div>
   </div>
 </section>
@@ -378,8 +407,8 @@ footer b{color:var(--text-soft);font-weight:500}
         <p>Não. O material é educativo e não substitui o acompanhamento com o seu médico. Não interrompa nem altere nenhum tratamento sem orientação profissional.</p>
       </details>
       <details>
-        <summary>Por quanto tempo a condição de Black Friday fica disponível?</summary>
-        <p>A promoção fica disponível apenas durante o período da Black Friday. O carrinho abre no dia 16/11, e quem entrou na lista é avisado por WhatsApp e e-mail.</p>
+        <summary>Até quando vale o acesso vitalício?</summary>
+        <p>O acesso vitalício vale só para quem entrar no primeiro dia da Black Friday, até as 23:59 do dia 16/11. A partir do dia 17/11, o acesso passa para um ano.</p>
       </details>
       <details>
         <summary>Como recebo o acesso?</summary>
@@ -408,18 +437,22 @@ footer b{color:var(--text-soft);font-weight:500}
 </footer>
 
 <script>
-/* Preencher quando a oferta estiver definida:
-   checkoutUrl = link de checkout da Hotmart
-   installments / installmentValue / cashPrice = valores da Black Friday */
-var OFFER={checkoutUrl:'',installments:null,installmentValue:'',cashPrice:''};
+/* checkoutUrl = link de checkout da Hotmart */
+var OFFER={checkoutUrl:'https://payfast.greenn.com.br/8wct2wr'};
 (function(){
   var links=document.querySelectorAll('[data-checkout]');
   if(OFFER.checkoutUrl){for(var i=0;i<links.length;i++){links[i].href=OFFER.checkoutUrl;links[i].rel='noopener';links[i].target='_blank';}}
-  if(OFFER.installments&&OFFER.installmentValue){
-    document.getElementById('price-from').textContent='Por apenas';
-    document.getElementById('price-big').innerHTML='<small>'+OFFER.installments+'x de R$</small> '+OFFER.installmentValue;
-    document.getElementById('price-cash').textContent=OFFER.cashPrice?('ou R$ '+OFFER.cashPrice+' à vista'):'';
+  /* Timer: acesso vitalício até 23:59 de 16/11/2026 (horário de Brasília) */
+  var fim=new Date('2026-11-16T23:59:59-03:00').getTime();
+  var h=document.getElementById('t-h'),m=document.getElementById('t-m'),sc=document.getElementById('t-s'),lb=document.getElementById('timer-label');
+  function p(n){return (n<10?'0':'')+n}
+  function tick(){
+    var d=fim-Date.now();
+    if(d<=0){h.textContent=m.textContent=sc.textContent='00';lb.textContent='O acesso vitalício foi encerrado';clearInterval(iv);return}
+    var t=Math.floor(d/1000);
+    h.textContent=p(Math.floor(t/3600));m.textContent=p(Math.floor(t%3600/60));sc.textContent=p(t%60);
   }
+  var iv=setInterval(tick,1000);tick();
 })();
 </script>
 </body>
