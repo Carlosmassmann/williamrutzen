@@ -215,6 +215,22 @@ footer b{color:var(--text-soft);font-weight:500}
 .warn{margin:0 calc(var(--px) * -1);padding:22px var(--px);background:#fff;color:#c1121f;font-weight:700;font-size:15px;line-height:1.5;text-align:center}
 .price .big{font-weight:400}
 @media (max-width:900px){.offer-card{--px:22px;--py:64px}.ribbon{width:170px;height:170px}.ribbon span{top:32px;left:-66px;width:240px;font-size:10.5px;padding:9px 0}.tbox{min-width:74px}.tbox b{font-size:34px}.btn-buy{width:100%;text-align:center}}
+
+/* accordion de módulos */
+.mods{max-width:900px;margin:0 auto}
+.mods details.mod{border-bottom:1px solid var(--line);padding:0}
+.mods details.mod:first-child{border-top:1px solid var(--line)}
+.mods summary{padding:18px 0;font-family:var(--sans);font-size:clamp(16px,1.9vw,19px);font-weight:500;gap:14px;line-height:1.35}
+.mods .mnum{font-family:var(--display);color:var(--blue);font-size:15px;min-width:26px;flex:none}
+.mods .mname{flex:1;color:var(--navy-2)}
+.mods .mtag{display:inline-block;margin-left:10px;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#7a5b12;background:#f6ebc9;border:1px solid #e3cf8f;border-radius:99px;padding:2px 9px;vertical-align:middle}
+.mods .mcount{font-size:13px;color:var(--text-faint);white-space:nowrap}
+.mods summary::after{color:var(--blue)}
+.mods .lessons{margin:0;padding:0 0 22px 40px;color:var(--text-soft);font-size:15.5px;line-height:1.5;columns:1}
+.mods .lessons li{padding:5px 0;border-top:1px dashed rgba(23,101,184,.14)}
+.mods .lessons li:first-child{border-top:0}
+.mods-sum{text-align:center;margin-top:28px;color:var(--text-soft);font-size:15px}
+@media(max-width:560px){.mods .mcount{display:none}.mods .lessons{padding-left:30px}}
 </style>
 
 </head>
@@ -311,6 +327,33 @@ footer b{color:var(--text-soft);font-weight:500}
         </div>
       </li>
     </ol>
+  </div>
+</section>
+
+<section class="light" id="modulos" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head rv" style="grid-template-columns:minmax(0,1fr);margin-bottom:36px;text-align:center;justify-items:center">
+      <div><span class="eyebrow">Conteúdo completo</span><h2 style="margin-top:16px">Veja tudo o que você recebe, <em>todos os módulos e aulas</em></h2></div>
+    </div>
+    <div class="mods rv">
+<details class="mod"><summary><span class="mnum">01</span><span class="mname">Seja bem-vindo</span><span class="mcount">4 aulas</span></summary><ol class="lessons"><li>Seja bem-vindo</li><li>Por que emagrecer</li><li>Princípios Básicos do Emagrecimento</li><li>Gerenciamento de Energia</li></ol></details>
+<details class="mod"><summary><span class="mnum">02</span><span class="mname">As ferramentas comportamentais</span><span class="mcount">5 aulas</span></summary><ol class="lessons"><li>Um jeito diferente de pensar em Emagrecimento</li><li>Meta Calórica - ao vivo</li><li>Low Carb - ao vivo</li><li>Jejum Intermitente - ao vivo</li><li>Estratégia P-E - ao vivo</li></ol></details>
+<details class="mod"><summary><span class="mnum">03</span><span class="mname">Ferramentas adicionais de emagrecimento</span><span class="mcount">2 aulas</span></summary><ol class="lessons"><li>Ferramentas complementares de Emagrecimento</li><li>Ferramentas Médicas de Emagrecimento</li></ol></details>
+<details class="mod"><summary><span class="mnum">04</span><span class="mname">Ajustando o processo</span><span class="mcount">2 aulas</span></summary><ol class="lessons"><li>Os erros mais comuns de quem quer emagrecer</li><li>Avaliando e ajustando seu processo</li></ol></details>
+<details class="mod"><summary><span class="mnum">05</span><span class="mname">Aulas extras</span><span class="mcount">1 aula</span></summary><ol class="lessons"><li>Aula extra - Escolha e Gerenciamento das Estratégias</li></ol></details>
+<details class="mod"><summary><span class="mnum">06</span><span class="mname">Não saia sem assistir novamente esta aula</span><span class="mcount">1 aula</span></summary><ol class="lessons"><li>Escolha e Gerenciamento das Estratégias</li></ol></details>
+<details class="mod"><summary><span class="mnum">07</span><span class="mname">Resistência à insulina no detalhe</span><span class="mcount">1 aula</span></summary><ol class="lessons"><li>Resistência à Insulina no Detalhe</li></ol></details>
+<details class="mod"><summary><span class="mnum">08</span><span class="mname">Emagrecendo com low carb</span><span class="mcount">1 aula</span></summary><ol class="lessons"><li>Emagrecendo com Low Carb</li></ol></details>
+<details class="mod"><summary><span class="mnum">09</span><span class="mname">Guia prático do jejum intermitente</span><span class="mcount">6 aulas</span></summary><ol class="lessons"><li>O que é Jejum</li><li>Os Benefícios do Jejum</li><li>Tipos de Jejum</li><li>Dicas Práticas</li><li>Mitos sobre Jejum Intermitente</li><li>Resumo dos Conceitos</li></ol></details>
+<details class="mod"><summary><span class="mnum">10</span><span class="mname">Guia prático dos suplementos</span><span class="mcount">23 aulas</span></summary><ol class="lessons"><li>Introdução aos Suplementos</li><li>Whey Protein e BCAA</li><li>Creatina</li><li>Cafeína</li><li>L-Carnitina</li><li>Suplementos Proteicos não Lácteos</li><li>Colágeno</li><li>TCM (ou MCT)</li><li>Ômega 3 - EPA e DHA</li><li>Coenzima Q10</li><li>Vitamina D</li><li>Ferro</li><li>Magnésio</li><li>Vitamina C</li><li>Resveratrol</li><li>Picolinato de Cromo</li><li>Berberina</li><li>Curcumina</li><li>Ashwagandha</li><li>Melatonina</li><li>Super Suplemento 1</li><li>Super Suplemento 2</li><li>Lição Final</li></ol></details>
+<details class="mod"><summary><span class="mnum">11</span><span class="mname">Guia prático do diabetes</span><span class="mcount">13 aulas</span></summary><ol class="lessons"><li>Introdução ao Diabetes</li><li>Compreendendo tudo sobre o diabetes e sua manifestação no corpo</li><li>Resistência à insulina. O que é e como impacta na saúde</li><li>Entendendo os exames sobre o diabetes</li><li>Entendendo como os alimentos impactam no diabetes</li><li>Quais os melhores alimentos e as melhores dietas para o diabético</li><li>Jejum é possível e saudável para o diabético</li><li>Exercício físico e seu papel na saúde do diabético</li><li>Qual a importância do sono no controle de glicose</li><li>Álcool e o diabetes</li><li>Medicamentos para o diabético</li><li>As complicações do diabetes mal controlado</li><li>Resumo dos conhecimentos</li></ol></details>
+<details class="mod"><summary><span class="mnum">12</span><span class="mname">Jornada do emagrecimento</span><span class="mcount">2 aulas</span></summary><ol class="lessons"><li>Gravação dia 15-03-2025</li><li>Gravação dia 16-03-2025</li></ol></details>
+<details class="mod"><summary><span class="mnum">13</span><span class="mname">Clube de leitura</span><span class="mcount">17 aulas</span></summary><ol class="lessons"><li>Fevereiro - Uma dieta além da moda - Aula ao vivo - Parte 01 - Resumo do livro</li><li>Fevereiro - Uma dieta além da moda - Aula ao vivo - Parte 02 - Dúvidas</li><li>Março - Hábitos Atômicos - James Clear</li><li>Março - Hábitos Atômicos - Comentários em grupo</li><li>Abril - O Código do Diabetes - Jason Fung</li><li>Abril - O Código do Diabetes - Comentários em grupo</li><li>Maio - Por que Engordamos - Gary Taubes</li><li>Maio - Por que Engordamos - Comentários em grupo</li><li>Junho - Revisão dos livros</li><li>Julho - Mindset - Carol Dweck</li><li>Julho - Mindset - Dúvidas e trocas</li><li>Agosto - Jejum, Uma Nova Terapia - Thierry de Lestrade</li><li>Agosto - Jejum, Uma Nova Terapia - Trocas</li><li>Setembro - Por que dormimos - Matthew Walker</li><li>Setembro - Por que dormimos - Dúvidas e trocas</li><li>Bônus - Dicas práticas de como ser um leitor eficiente</li><li>Bônus - A Ciência do Desconforto - Dra. Maíra Soliane</li></ol></details>
+<details class="mod"><summary><span class="mnum">14</span><span class="mname">Ebooks e guias práticos</span><span class="mcount">8 aulas</span></summary><ol class="lessons"><li>Guia da Menopausa</li><li>A Caixa de Ferramentas do Emagrecimento</li><li>Cardápio e Receitas Relação P:E</li><li>Low Carb, Low Cost (Baixo carboidrato, Baixo custo)</li><li>20 Receitas de Carne Moída + Receitas Bônus</li><li>7 Receitas Doces Proteicas Low Carb (com e sem lácteos)</li><li>Guia Prático do Jejum Intermitente</li><li>Guia Prático da Musculação</li></ol></details>
+<details class="mod"><summary><span class="mnum">15</span><span class="mname">Bônus: Mentoria Turma 2 - aulas teóricas<span class="mtag">Bônus</span></span><span class="mcount">4 aulas</span></summary><ol class="lessons"><li>Aula 1 - Conceitos iniciais sobre o ganho de peso</li><li>Aula 2 - Fisiologia básica do Emagrecimento</li><li>Aula 3 - A Caixa de Ferramentas de Emagrecimento</li><li>Aula 5 - Efeito Sanfona</li></ol></details>
+<details class="mod"><summary><span class="mnum">16</span><span class="mname">Bônus: Mentoria Turma 2 - casos clínicos<span class="mtag">Bônus</span></span><span class="mcount">5 aulas</span></summary><ol class="lessons"><li>Aula 4 - Caso Clínico Obesidade Familiar</li><li>Aula 6 - Caso Clínico de Compulsão</li><li>Aula 7 - Caso Clínico de Síndrome Metabólica</li><li>Aula 9 - Caso Clínico 02 - Resistência Insulínica</li><li>Aula 10 - Caso Clínico de Transtorno Alimentar</li></ol></details>
+    </div>
+    <p class="mods-sum">16 módulos · 95 aulas e guias · acesso por área de membros</p>
   </div>
 </section>
 
