@@ -492,7 +492,15 @@ footer b{color:var(--text-soft);font-weight:500}
 var OFFER={checkoutUrl:'https://payfast.greenn.com.br/8wct2wr'};
 (function(){
   var links=document.querySelectorAll('[data-checkout]');
-  if(OFFER.checkoutUrl){for(var i=0;i<links.length;i++){links[i].href=OFFER.checkoutUrl;links[i].rel='noopener';links[i].target='_blank';}}
+  if(OFFER.checkoutUrl){
+    var keep=['utm_source','utm_medium','utm_campaign','utm_content','utm_term','src','sck','fbclid'];
+    var qs={},p=new URLSearchParams(location.search),has=false;
+    keep.forEach(function(k){if(p.get(k)){qs[k]=p.get(k);has=true;}});
+    try{if(has){localStorage.setItem('bf_utm',JSON.stringify(qs));}else{var s=localStorage.getItem('bf_utm');if(s)qs=JSON.parse(s)||{};}}catch(e){}
+    var u=new URL(OFFER.checkoutUrl);
+    Object.keys(qs).forEach(function(k){u.searchParams.set(k,qs[k]);});
+    for(var i=0;i<links.length;i++){links[i].href=u.toString();links[i].rel='noopener';links[i].target='_blank';}
+  }
   /* Timer: acesso vitalício até 23:59 de 16/11/2026 (horário de Brasília) */
   var fim=new Date('2026-11-16T23:59:59-03:00').getTime();
   var h=document.getElementById('t-h'),m=document.getElementById('t-m'),sc=document.getElementById('t-s'),lb=document.getElementById('timer-label');
