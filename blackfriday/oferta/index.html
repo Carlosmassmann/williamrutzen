@@ -189,6 +189,14 @@ footer b{color:var(--text-soft);font-weight:500}
 }
 @media (max-width:420px){.btn{padding:18px 22px;font-size:14px}.hero h1{font-size:38px}}
 
+
+/* seções claras */
+.light{--text:#0f1d2e;--text-soft:#43546b;--text-faint:#5b6e86;--sky:#1765b8;--mist:#0e3361;--line:rgba(23,101,184,.18);--line-strong:rgba(23,101,184,.32);background:#f5f9fe;color:var(--text)}
+.light em{color:var(--blue)}
+.light .step:hover{background:linear-gradient(90deg,rgba(23,101,184,.08),transparent 70%)}
+.light .chips li{background:#fff;border-color:rgba(23,101,184,.22);color:var(--navy-2)}
+.light .step .n{opacity:1}
+.light summary:focus-visible{outline-color:var(--blue)}
 /* oferta: laço, timer, botão verde, aviso */
 .offer-card{position:relative;overflow:hidden;--px:40px;--py:64px;padding:var(--py) var(--px) 0}
 .offer-card .included{margin-bottom:44px}
@@ -252,7 +260,7 @@ footer b{color:var(--text-soft);font-weight:500}
   </div>
 </div>
 
-<section id="conteudo">
+<section id="conteudo" class="light">
   <div class="wrap">
     <div class="sec-head rv">
       <div>
@@ -392,7 +400,7 @@ footer b{color:var(--text-soft);font-weight:500}
   </div>
 </section>
 
-<section>
+<section class="light" id="faq">
   <div class="wrap">
     <div class="sec-head rv" style="grid-template-columns:minmax(0,1fr);margin-bottom:36px;text-align:center;justify-items:center">
       <div><span class="eyebrow">Perguntas frequentes</span><h2 style="margin-top:16px">Antes de <em>decidir.</em></h2></div>
