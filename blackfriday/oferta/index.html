@@ -413,14 +413,6 @@ footer b{color:var(--text-soft);font-weight:500}
       <span class="eyebrow">Oferta de Black Friday</span>
       <h2>O meu pacote <em>completo.</em></h2>
       <p class="sub">Todos os meus cursos e ebooks sobre emagrecimento, saúde metabólica e estilo de vida, mais as aulas bônus da Mentoria.</p>
-      <div class="timer" id="timer" role="timer" aria-live="off">
-        <span class="timer-label" id="timer-label">O acesso vitalício acaba em:</span>
-        <div class="timer-grid">
-          <div class="tbox"><b id="t-h">00</b><i>Horas</i></div>
-          <div class="tbox"><b id="t-m">00</b><i>Min</i></div>
-          <div class="tbox"><b id="t-s">00</b><i>Seg</i></div>
-        </div>
-      </div>
       <div class="price" id="price">
         <span class="from" id="price-from">Por apenas</span>
         <span class="big" id="price-big"><small>12x de R$</small> 61,38</span>
@@ -429,7 +421,7 @@ footer b{color:var(--text-soft);font-weight:500}
       <a class="btn btn-buy" id="buy" href="#oferta" data-checkout>Quero garantir acesso vitalício
         <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="18" height="18"><path d="M4 10h12M11 5l5 5-5 5"/></svg>
       </a>
-      <p class="fine">Acesso vitalício válido apenas no primeiro dia da Black Friday.</p>
+      <p class="fine">Acesso vitalício estendido por tempo indeterminado.</p>
       <ul class="included">
         <li>Cursos sobre emagrecimento e saúde metabólica</li>
         <li>Ebooks de receitas e guias práticos</li>
@@ -438,7 +430,7 @@ footer b{color:var(--text-soft);font-weight:500}
         <li>Bônus: aulas teóricas e casos clínicos da Mentoria</li>
         <li>Conteúdo organizado em trilha, do começo ao fim</li>
       </ul>
-      <p class="warn">O bônus de acesso vitalício é exclusivo para quem entrar no primeiro dia de Black Friday, a partir do dia 17/11 passa para um ano de acesso.</p>
+      <p class="warn">Estendemos por tempo indeterminado o bônus de acesso vitalício.</p>
     </div>
   </div>
 </section>
@@ -459,7 +451,7 @@ footer b{color:var(--text-soft);font-weight:500}
       </details>
       <details>
         <summary>Até quando vale o acesso vitalício?</summary>
-        <p>O acesso vitalício vale só para quem entrar no primeiro dia da Black Friday, até as 23:59 do dia 16/11. A partir do dia 17/11, o acesso passa para um ano.</p>
+        <p>Estendemos o acesso vitalício por tempo indeterminado. Quem entrar agora continua com acesso vitalício, sem prazo para terminar.</p>
       </details>
       <details>
         <summary>Como recebo o acesso?</summary>
@@ -501,17 +493,6 @@ var OFFER={checkoutUrl:'https://payfast.greenn.com.br/8wct2wr'};
     Object.keys(qs).forEach(function(k){u.searchParams.set(k,qs[k]);});
     for(var i=0;i<links.length;i++){links[i].href=u.toString();links[i].rel='noopener';links[i].target='_blank';}
   }
-  /* Timer: acesso vitalício até 23:59 de 16/11/2026 (horário de Brasília) */
-  var fim=new Date('2026-11-16T23:59:59-03:00').getTime();
-  var h=document.getElementById('t-h'),m=document.getElementById('t-m'),sc=document.getElementById('t-s'),lb=document.getElementById('timer-label');
-  function p(n){return (n<10?'0':'')+n}
-  function tick(){
-    var d=fim-Date.now();
-    if(d<=0){h.textContent=m.textContent=sc.textContent='00';lb.textContent='O acesso vitalício foi encerrado';clearInterval(iv);return}
-    var t=Math.floor(d/1000);
-    h.textContent=p(Math.floor(t/3600));m.textContent=p(Math.floor(t%3600/60));sc.textContent=p(t%60);
-  }
-  var iv=setInterval(tick,1000);tick();
 })();
 </script>
 </body>
